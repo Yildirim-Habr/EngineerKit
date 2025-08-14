@@ -56,22 +56,6 @@ class UnitConverter(QWidget):
                                     "Energy"])
         self.category_box.currentTextChanged.connect(self.update_units)
 
-        # Reference sentences for each category
-        self.reference_sentences = {
-            "Length": "1 m (SI) = 100 cm = 1000 mm = 0.001 km = 39.3701 inch = 3.28084 ft = 0.000621371 mile = 1.09361 yard",
-            "Pressure": "1 Pa (SI) = 0.001 kPa = 1e-5 bar = 0.000145038 psi = 9.86923e-6 atm = 0.00750062 mmHg = 0.000101972 kg/cm²",
-            "Area": "1 m² (SI) = 10,000 cm² = 1e6 mm² = 10.7639 ft² = 1550 in² = 0.0001 hectare",
-            "Volume": "1 m³ (SI) = 1,000 L = 1e6 cm³ = 35.3147 ft³ = 61,023.7 in³ = 264.172 gal (US)",
-            "Weight": "1 N (SI) = 0.101972 kgf = 0.224809 lbf",
-            "Mass": "1 kg (SI) = 1000 g = 1e6 mg = 0.001 t = 2.20462 lb = 35.27396 oz",
-            "Velocity": "1 m/s (SI) = 3.6 km/h = 2.23694 mph = 3.28084 ft/s = 39.3701 in/s",
-            "Volumetric Flow Rate": "1 m³/s (SI) = 60,000 L/min = 35.3147 ft³/s = 15,850.3 gal/min",
-            "Mass Flow Rate": "1 kg/s (SI) = 1000 g/s = 2.20462 lb/s = 3.6 t/h",
-            "Power": "1 W (SI) = 0.001 kW = 0.00134102 hp = 3.41214 BTU/h = 0.239006 cal/s",
-            "Energy": "1 J (SI) = 0.001 kJ = 0.239006 cal = 0.000239006 kcal = 0.000277778 Wh = 2.77778e-7 kWh = 0.000947817 BTU"
-        }
-
-
         # Unit selectors
         self.from_unit_box = QComboBox()
         self.to_unit_box = QComboBox()
@@ -83,7 +67,7 @@ class UnitConverter(QWidget):
         # Switch button
         self.switch_btn = QPushButton()  # Simple arrow icon
         self.switch_btn.setFixedWidth(37)
-        self.switch_btn.setIcon(QIcon("yaha.png"))  # Path to your PNG file
+        self.switch_btn.setIcon(QIcon("switch.png"))  # Path to your PNG file
         self.switch_btn.setIconSize(QSize(20, 20))    # Adjust icon size
         self.switch_btn.clicked.connect(self.switch_units)
 
